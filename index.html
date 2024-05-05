@@ -1,0 +1,1008 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css">
+    
+    <script>
+    function toggleClass(elementId, className) {
+    var element = document.getElementById(elementId);
+    element.classList.toggle(className);
+  }
+  
+    function showMessage() {
+    alert("Hello! Welcome to our college website.");
+  }
+  
+  var button = document.getElementById("myButton");
+  button.addEventListener("click", showMessage);
+    </script>
+    
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Lexend';
+    scroll-behavior: smooth;
+}
+
+:root{
+    --box-Shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    --border-radius: 30px;
+    --card-background:linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    --blur:blur(3.5px);
+    --primery-color: #263D5A;
+    --card-border: 2px solid rgba(255, 255, 255, 1); 
+}
+
+
+
+.mainheader{
+    height:100%;
+    background: url("imges/background5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 8%;
+    width: 90%;
+    margin: auto;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1%;
+    z-index: 9999;
+    background: var(--card-background) !important;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-Shadow);
+    backdrop-filter: var(--blur);
+    border: 2px solid #fff;
+
+}
+
+.headerimg {
+    font-size: 30px;
+    color: var(--primery-color);
+}
+
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 19px;
+    position: relative;
+}
+
+nav ul li a:after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--primery-color);
+    transition: .6s;
+}
+nav ul li a:hover:after{
+    width: 100%;
+}
+
+.bars {
+    display: none;
+}
+.contener{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 150px 8%;
+}
+
+button{
+    height: 40px;
+    width:140px;
+    background-color: #a148ff !important;
+    background: linear-gradient(90deg, #a148ff 0%, #ff6f45);
+    transition: 0.5s;
+    border: none;
+    border-radius: 30px;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover{
+    color: white;
+    border-color: #1e1e1e;
+    background-color: #1e1e1e;
+}
+
+.contener .content{
+    background: var(--card-background);
+    backdrop-filter: var(--blur);
+    box-shadow: var(--box-Shadow);
+    border-radius: var(--border-radius);
+    border: 2px solid #fff;
+    padding: 4rem 2.3rem;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    gap: 30px;
+    height: 420px;
+    z-index: 1;
+    overflow: visible;
+}
+
+.img-container{
+    width: 360px;
+    height: 400px;
+    position: absolute;
+    top: 22%;
+    border-radius: 30px;
+    right: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-container img{
+    height: 100%;
+    border-radius: 30px;
+    width: 100%;
+}
+.contener .content h1{
+    font-size: 60px;
+}
+.contener .content p{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    width: 90%;
+}
+/* -----------------  Container  ---------------------------- */
+
+.container{
+    padding: 100px 8%;
+}
+
+
+
+/* -----------------  Skils  ---------------------------- */
+
+.Section_title{
+    font-size: 35px;
+    text-align: center;
+    color: var(--primery-color);
+}
+
+
+.service_wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service_wrapper .services{
+    margin-top: 20px;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+    /* flex-wrap: wrap; */
+    border-radius: var(--border-radius);
+    background: var(--card-background);
+    backdrop-filter: var(--blur);
+    box-shadow: var(--box-Shadow);
+    border: var(--card-border);
+}
+
+.service_wrapper .services .service{
+    min-width: 100px;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service_wrapper .services .service > div{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: var(--box-Shadow);
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+}  
+.service_wrapper .services .service i{  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #A148FF;
+    font-size: 50px;
+}
+
+.service_wrapper .services .service h2{
+    color: var(--primery-color);
+}  
+
+/* About */
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+.about .about_image{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .about_image img{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-Shadow);
+}
+
+.about .about_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 50px;
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    backdrop-filter: var(--blur);
+    border: var(--card-border);
+
+}
+
+.about .about_content h2{
+    color: var(--primery-color);
+    font-size: 50px;
+}
+
+/* Our Work */
+
+
+.process_wrapper{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: var(--card-background);
+    border: var(--card-border);
+    border-radius: var(--border-radius);
+    backdrop-filter: var(--blur);
+}
+
+.process_wrapper h3{
+    font-size: 30px;
+}
+
+.our-work_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.our-work_wrapper .work_profiles{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.our-work_wrapper .work_profiles .work_profile{
+    min-width: 220px;   
+    height: 360px;
+    border-radius: var(--border-radius);
+    position: relative;
+    overflow: hidden;
+}
+
+.our-work_wrapper .work_profiles .work_profile button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    transition: 1s ease;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(0.8);
+}
+.our-work_wrapper .work_profiles .work_profile:hover button{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+.our-work_wrapper .work_profiles .work_profile:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius);
+    background-color: rgb(0, 0, 0,0.2);
+    transition: all .3s ease;
+}
+.our-work_wrapper .work_profiles .work_profile:hover:after{
+    background-color: rgb(0, 0, 0,0.8);
+}
+
+.our-work_wrapper .work_profiles .work_profile img{
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    object-position: top;
+    transition: 1s ease;
+}
+
+.our-work_wrapper .work_profiles .work_profile:hover img{
+    transform: scale(1.05) rotate(3deg); 
+}
+
+.process_bars h3{
+    font-size: 26px;
+}
+.process_bars .processbars_wrapper{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+.process_bars .processbars_wrapper h3{
+    font-size: 16px;
+}
+
+.process_bars .processbars_wrapper h3 span{
+    color: rgb(161, 72, 255);
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.process_bars .processbars_wrapper .line{
+    height: 8px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.process_bars .processbars_wrapper .line:after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 50%;
+    background: rgb(161, 72, 255);
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.process_bars .processbars_wrapper .HTML .line:after{
+    width: 90%;
+}
+.process_bars .processbars_wrapper .CSS3 .line:after{
+    width: 80%;
+}
+.process_bars .processbars_wrapper .Javascript .line:after{
+    width: 65%;
+}
+.process_bars .processbars_wrapper .REACT .line:after{
+    width: 54%;
+}
+
+.clients{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+.clients .client{
+    width: 100%;
+    height: 220px;
+    padding: 5% ;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-background);
+    border: 2px solid #fff;
+    backdrop-filter: var(--blur);
+    border-radius: var(--border-radius);
+}
+
+.clients .client img{
+    height: auto;
+    width: 50%;
+}
+
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+    
+/* Contact */
+.form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 8%;
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--blur);
+    border: 2px solid #fff;
+}
+
+.form .Section_title{
+    margin-bottom: 50px;
+}
+
+
+.box-wrapper{
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+label{
+    color: var(--primery-color);
+}
+
+input,textarea{
+    height: 42px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0.5px solid rgba(255, 255, 255, 1);
+    padding-left: 12px !important;
+    outline: none;
+    color: var(--primery-color);
+
+}
+
+input:focus,textarea:focus{
+    border-color: var(--primery-color);
+}
+textarea{
+    height: 200px;
+    padding-top: 15px;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+footer .container{
+    position: relative;
+    height: 90%;
+    width: 100%;
+    z-index: 1;
+    background: var(--card-background);
+    border: 2px solid #fff;
+    box-shadow: var(--box-Shadow);
+    border-radius: var(--border-radius);
+    backdrop-filter: var(--blur);
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.col{
+    width: 100%;
+    padding: 0 15px;
+}
+.col .icons{
+    display: flex;
+    gap: 20px;
+}
+
+.col .icons i{
+    color: var(--primery-color);
+}
+.col h4{
+    color: #1a1a1a;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+.footer_box{
+    display: flex;
+    gap: 10px;
+}
+.col ul{
+    margin: 40px 0;
+}
+.col ul li{
+    margin: 14px 0;
+    color: var(--primery-color);
+    transition: .6s;
+    font-size: 17px;
+}
+
+
+.col ul li a{
+    font-size: 17px;
+    color: var(--primery-color);
+}
+
+.col ul li:hover{
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* font awesome icons style  */
+footer .icons{
+    display: flex;
+}
+footer .icons li a{
+    margin: 0 4px;
+    padding: 6px 10px;
+    color: var(--primery-color);
+    color: yellowgreen;
+}
+footer .icons li:hover a{
+    background: #fff;
+    
+}
+footer .icons li:hover a i{
+    color: #23223a;
+}
+
+
+
+@media(max-width:1200px){
+
+    .contener .content h1 {
+        font-size: 50px;
+    }
+    .contener .content p {
+        font-size: 18px;
+    }
+    .img-container{
+        top: 24%;
+    }
+    
+/* .contener {
+    min-height: 90vh;
+} */
+}
+
+
+@media(max-width:1000px){
+    .bars {
+        display: block;
+        cursor: pointer;
+    }
+    ul li{
+        margin:30px 0px;
+    }
+  
+    nav ul{
+        display: flex;
+        flex-direction: column;        
+        position: absolute;
+        padding-left: 8%;
+        top:120%;
+        left:0;
+        width:100%;
+        z-index: 9999;
+        opacity: 0;
+        transition: 0.5s;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-Shadow);
+    }
+    nav ul li{
+        margin: 18px 0;
+        padding: 8px 0;
+    }
+    nav ul li a {
+        color: #1e1e1e;
+    }
+    .show{
+        opacity: 1;
+    }
+    .contener{
+        padding:80px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contener .content{
+        width: 80%;
+        margin-top: 80px;
+    }
+
+    .img-container {
+        position: relative;
+        margin-left: 50px;
+        margin-top: 50px;
+        width: 50%;
+        transform: translateX(10%);
+    }
+    .our-work_wrapper .work_profiles {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+
+}
+
+@media(max-width:900px){
+    
+    .about{
+        flex-direction: column;
+    }
+    .about .about_image{
+        width: 80%;
+    }
+    .our-work_wrapper .work_profiles {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .clients {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .row {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .service_wrapper .services{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .process_wrapper{
+        width: 100%;
+    }
+}
+
+
+
+@media(max-width:768px){
+    .mainheader{
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .contener .content p{
+        width: 100%;
+    }
+    .contener .content h1 {
+        font-size: 38px;
+    }
+    .our-work_wrapper .work_profiles {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .clients {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .row {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .service_wrapper .services{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media(max-width:500px){
+    .contener .content h1 {
+        font-size: 34px;
+    }
+    .img-container{
+        width: 90%;
+    }
+
+}
+
+
+@media(max-width:454px){
+    .contener .content h1 {
+        font-size: 30px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+    <div class="mainheader" id="home">
+        <nav>
+            <div class="logo">
+            <h1 data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">Mrityunjay</h1>
+            </div>
+                <ul class="menu">
+                    <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="200"><a href="#home">Home</a></li>
+                    <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="400"><a href="#service">Service</a></li>
+                    <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="600"><a href="#about">About</a></li>
+                    <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="800"><a href="#work">Our Work</a></li>
+                   <!-- <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="1200"><a href="#clients">Clients</a></li>-->
+                    <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="1400"><a href="#contact">Contact</a></li>
+                </ul>
+                <button data-aos="fade-down" data-aos-duration="1800" data-aos-delay="1600">Contact me</button>
+                    
+            <!-- </div> -->
+            <div class="bars">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div class="contener">
+            <div class="content" data-aos="fade-left" data-aos-duration="1800" data-aos-delay="100">
+                <h1 data-aos="fade-right" data-aos-duration="1800" data-aos-delay="800">Developed by Mrityunjay Kumar</h1>
+                <p data-aos="fade-right" data-aos-duration="1800" data-aos-delay="1000">Some facts of my Life</p>
+                <button data-aos="fade-right" data-aos-duration="1800" data-aos-delay="1200">Click here</button>
+            </div>
+            <div class="img-container" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="300">
+            <img src="imges/mbr_fnl.jpg" alt="Me"/>
+            </div>
+        </div>
+    </div>
+    <!-- Service -->
+    <div style="background: url(imges/background3.jpeg) no-repeat; " id="service">
+        <div class="service_wrapper container">
+            <h2 class="Section_title" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">Our Services</h2>
+            <div class="services" data-aos="zoom-out" data-aos-duration="1800" data-aos-delay="100">
+                <div class="service" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="300">
+                    <div>
+                        <i class="ri-megaphone-line"></i>
+                    </div>
+                    <h2>Programming</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur Lorem ipsum dolor sit. adipisicing elit. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="service" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="600">
+                    <div>
+                        <i class="ri-exchange-2-fill"></i>
+                    </div>
+                    <h2>Web design</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur Lorem ipsum dolor sit. adipisicing elit. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="service" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="1200">
+                    <div>
+                        <i class="ri-gift-2-line"></i>
+                    </div>
+                    <h2>Front end Developer</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur Lorem ipsum dolor sit. adipisicing elit. Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- About Me -->
+    <div style="background: url(imges/background8.jpg);" id="about"> 
+        <div class="about_wrapper container">
+            <div class="about">
+                <div class="about_image" data-aos="zoom-out" data-aos-duration="1800" data-aos-delay="100">
+                    <img src="imges/mbr.jpg" alt="">
+                </div>
+                <div class="about_content" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="400">
+                    <h2 data-aos="fade-down" data-aos-duration="1800" data-aos-delay="500">About Us</h2> 
+                    <p data-aos="fade-down" data-aos-duration="1800" data-aos-delay="700">We are a team of passionate photographers Lorem ipsum dolor sit amet. who specialize in capturing</p>
+                    <p data-aos="fade-down" data-aos-duration="1800" data-aos-delay="900">the beauty and essence of your home or business, we will work closely</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Work -->
+    <div style="background: url(imges/background5\ \(1\).jpg) no-repeat; background-size: cover;" id="work">
+        <div class="our-work_wrapper container">
+            <h2 class="Section_title" data-aos="fade-right" data-aos-duration="1800" data-aos-delay="100">Our work</h2>
+            <div class="work_profiles">
+                <div class="work_profile" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="500">
+                    <img src="imges/work_img1.jpg" alt="">
+                    <button>View</button>
+                </div>
+                <div class="work_profile" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="700">
+                    <img src="imges/work-img_2.jpg" alt="">
+                    <button>View</button>
+                </div>
+                <div class="work_profile" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="900">
+                    <img src="imges/work-img_3.jpg" alt="">
+                    <button>View</button>
+                </div>
+                <div class="work_profile" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="1100">
+                    <img src="imges/work-img_4.jpg" alt="">
+                    <button>View</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Process -->
+    <div style="background: url(imges/background1.jpg);" class="container">
+        <div class="process_wrapper container">
+            <h3 data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">PROCESS</h3>
+            <p data-aos="fade-down" data-aos-duration="1800" data-aos-delay="300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias possimus dicta blanditiis harum doloremque quis voluptates quaerat temporibus, fugit dolorum aspernatur! 
+                Facilis cupiditate iusto sunt saepe. Velit accusantium ratione veniam?</p>
+
+                <div class="process_bars">
+                    <div class="processbars_wrapper">
+                        <div class="skil_name HTML" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">
+                            <h3>Interior Photography <span>90%</span></h3>
+                            <div class="line"></div>
+                        </div>
+                        <div class="skil_name CSS3" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="200">
+                            <h3>Portrait Photo <span>80%</span></h3>
+                            <div class="line"></div>
+                        </div>
+                        <div class="skil_name Javascript" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="300">
+                            <h3>Art Photo <span>65%</span></h3>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                
+
+        </div>
+    </div>
+    <!-- Our Clients -->
+    <div style="background: url(imges/background2.webp);" id="clients">
+        <div class="clients_wrapper container">
+            <h3 class="Section_title" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">OUR CLIENTS SAYS ABOUT US</h3>
+            <div class="clients">
+                <div class="client" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="100">
+                    <img src="imges/1.png" alt="">
+                </div>
+                <div class="client" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="200">
+                    <img src="imges/2.png" alt="">
+                </div>
+                <div class="client" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="300">
+                    <img src="imges/3.jpeg" alt="">
+                </div>
+                <div class="client" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="400">
+                    <img src="imges/4.png" alt="">
+                </div>
+                <div class="client" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="500">
+                    <img src="imges/5.png" alt="">
+                </div>
+                <div class="client" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="600">
+                    <img src="imges/1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact -->
+    <div style="background: url(imges/background3.jpeg);" id="contact">
+        <div class="form_wrap container">
+            <div class="form">
+                <h3 class="Section_title" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">Contact US</h3>
+                <div class="box-wrapper">
+                    <div class="box" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">
+                        <label for="#">First Name</label>
+                        <input type="text" placeholder="Name*">
+                    </div>
+                    <div class="box" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="200">
+                        <label for="#">Your Email</label>
+                        <input type="email" placeholder="Email*">
+                    </div>
+                </div>
+                <div class="box" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="300">
+                    <label for="#">Subject</label>
+                    <input type="text" placeholder="Subject*">
+                </div>
+                <div class="box" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="400">
+                    <label for="#">Your Message</label>
+                    <textarea name="#" cols="30" rows="10" placeholder="Your Message*"></textarea>
+                </div>
+                <button data-aos="fade-down" data-aos-duration="1800" data-aos-delay="500">Send Message</button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="container" style="background: url(imges/background4.jpeg);">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h4 data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">Address</h4>
+                        <ul>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="200">
+                                <div class="footer_box">
+                                    <i class="fa-solid fa-location-dot"></i> <span>Mrityunjay Kumar</span>
+                                </div>
+                            </li>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="300">
+                                <div class="footer_box">
+                                    <i class="fa-solid fa-phone"></i> <span>8271599028</span>
+                                </div>
+                            </li>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="400">
+                                <ul class="icons">
+                                    <div class="icon">
+                                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#"><i class="fa-brands  fa-x-twitter"></i></a>
+                                    </div> 
+                                    <div class="icon">
+                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4 data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">Company</h4>
+                        <ul>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="500"><a href="#">About</a></li>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="600"><a href="#">Jobs</a></li>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="700"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4 data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">Themes</h4>
+                        <ul>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="800"><a href="#">Features</a></li>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="900"><a href="#">Team</a></li>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="1000"><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4 data-aos="fade-down" data-aos-duration="1800" data-aos-delay="100">Support</h4>
+                        <ul>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="1100">Contact</li>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="1200">Testimonial</li>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="1300">Term & Services</li>
+                            <li data-aos="fade-down" data-aos-duration="1800" data-aos-delay="1400">Help</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+            AOS.init();
+            let bar = document.querySelector(".bars .fa-bars");
+            let manu = document.querySelector(".menu");
+    
+            bar.addEventListener("click",function(){
+                <!-- alert("error") -->
+                manu.classList.toggle("show");
+            }); 
+        </script>
+</body>
+</html>
